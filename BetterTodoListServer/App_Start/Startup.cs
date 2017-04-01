@@ -24,6 +24,8 @@ namespace BetterTodoListServer
 			HttpConfiguration conf = new HttpConfiguration();
 
 			new MobileAppConfiguration()
+				.AddMobileAppHomeController()
+				.AddTablesWithEntityFramework()
 				.MapApiControllers()
 				.ApplyTo(conf);
 
