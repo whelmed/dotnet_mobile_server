@@ -6,8 +6,10 @@ using System.Web.Http;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
+using Microsoft.Owin;
 using Owin;
 
+[assembly: OwinStartup(typeof(BetterTodoListServer.Startup))]
 namespace BetterTodoListServer
 {
 	public class Startup
